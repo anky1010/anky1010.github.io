@@ -36,12 +36,12 @@ function closeNav1() {
   document.getElementById("myNav1").style.width = "0%";
 }
 
-function openNav() {
+function openNav3() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
 }
 
-function closeNav() {
+function closeNav3() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
