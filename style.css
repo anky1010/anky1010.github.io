@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Common Styles */
+*{
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+  font-family: "Jura" sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+/* CSS for Slides */
+.text1 {
+  color: #f2f2f2;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 180px;
+  width: 100%;
+  text-align: center;
+}
+.text2 {
+  color: #f2f2f2;
+  font-size: 35px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 380px;
+  width: 100%;
+  text-align: right;
+}
+.text3 {
+  color: #f2f2f2;
+  font-size: 45px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 180px;
+  width: 100%;
+  text-align: right;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/* End of CSS for Slides */
+
+/* About Section */
+
+.about-container {
+  padding: 100px 0;
+}
+
+.aboutimage {
+  max-width: auto;
+  padding-left: 50px;
+  height: 350px;
+}
+
+.column{
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+p {
+  font-size: 18px;
+}
+
+.left {
+  float: left;
+  width: 20%;
+  padding: 20px;
+}
+.right {
+  float: right;
+  width: 65%;
+  padding-top: 65px;
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+    width: auto;
+  }
+  .right {
+    width: auto;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* End of About Section */
+
+/* Skills section */
+.skills-container {
+  padding-top: 100px;
+  background-color: #b98006;
+  color: white;
+}
+
+ h2 {
+  margin-bottom:10px;
+  text-align: center;
+  font-size: 25px; 
+}
+
+h3 {
+  margin-bottom:130px;
+  margin-top: 70px;
+  text-align: center;
+  font-size: 21px; 
+}
+h4 {
+  margin-bottom:10px;
+  text-align: center;
+  font-size: 18px; 
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 120px;
+  height: 100px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back {
+  background-color: transparent;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.checked {
+  color: maroon;
+}
+
+.one {
+  float: left;
+  width: 14%;
+  padding: 10px;
+  max-height: 20px;
+}
+
+.two {
+  float: left;
+  width: 14%;
+  min-height: 15px;
+  padding:10px;
+}
+
+@media screen and (max-width: 600px) {
+  .one {
+    width: auto;
+  }
+  .two {
+    width: auto;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.stats-container {
+  padding: 10px 0;
+}
+
+h5 {
+  font-size: 60px; 
+  font-weight: 900;
+  color: #eb6426;
+}
+h6 {
+  font-size: 20px; 
+  font-weight: 400;
+}
+.squareitem{
+margin-top: 30px;
+position: relative;
+}
+
+.squareinnercontainer{
+  position:relative;
+  padding: 50px 15px 35px;
+  text-align: center;
+  border: 2px solid #444;
+  border-top: none;
+}
+
+.squareinnercontainer:before,
+.squareinnercontainer:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  width:30%;
+  border-bottom:2px solid #444;
+}
+
+.squareinnercontainer:before{
+  right: 0px;
+}
+
+.squareinnercontainer:after{
+  left:0px;
+}
+
+.squareicon {
+  position: relative;
+  left: 0%;
+  top: -70px;
+  width: 40%;
+  height:10px;
+  font-size: 40px;
+}
+
+.three {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  max-height: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.four {
+  float: left;
+  width: 25%;
+  min-height: 15px;
+  padding:10px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .three {
+    width: auto;
+  }
+  .four {
+    width: auto;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Experience Section */
+
+.Experience-container {
+  padding: 50px 0;
+}
+
+.content {
+  color: black;
+  font-size: 70px;
+  position: relative;
+  bottom: 280px;
+  text-align: center;
+}
+.content1 {
+  color: black;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 280px;
+  width: 100%;
+  text-align: center;
+}
+
+.Experience-container img:hover {
+  opacity:0.5;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 8%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 600px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.open{
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .button {
+    width: auto;
+  }
+}
+
+.contactsection {
+  padding: 100px 0;
+  background-color: #b98006;
+  color: white;
+}
+
+.columns{
+  text-align: center;
+}
+
+.contactButton {
+  color: #fff;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top:10px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  font-size: 15px;
+  font-style: oblique;
+}
+
+.contactButton:hover {
+  text-decoration: none;
+  color:#b98006;
+  background-color: #fff;
+}
+
+.copyrightsection {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 5px;
+}
+
+.copyrightsection p {
+  margin: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 30px 3px 3px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
